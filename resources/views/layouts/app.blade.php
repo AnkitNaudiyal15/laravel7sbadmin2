@@ -22,7 +22,10 @@
 <body>
     <div id="app">
         <div id="wrapper">
-            @include('sidebar')
+            @if(Auth::user())
+                @include('sidebar')
+            @endif    
+            
             @yield('content') 
       </div>
    </div>
