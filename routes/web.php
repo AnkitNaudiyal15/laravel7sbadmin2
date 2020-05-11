@@ -14,7 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'HomeController@index')->name('home');
+    Route::resource('teams', 'TeamController');
+    Route::resource('players', 'PlayerController');
+    Route::resource('matches', 'MatchController');
+    Route::get('show', 'UsersDataController@create');
+    Route::get('index', 'UsersDataController@index');
+    Route::get('teamindex', 'TeamController@teamindex');
+    Route::get('playerindex', 'PlayerController@playerindex');
+    Route::get('matachindex', 'MatchController@matachindex');
+});
+

@@ -21,44 +21,36 @@
 
         <!-- Divider -->
         <hr class="sidebar-divider">
-
-        {{-- <!-- Heading -->
-        <div class="sidebar-heading">
-            Interface
-        </div> --}}
-
-        <!-- Nav Item - Pages Collapse Menu -->
+        
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="{{ route('home') }}" aria-expanded="true" aria-controls="collapseTwo">
+                <i class="fas fa-fw fa-cog"></i>
+                <span>Users</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{route('teams.index')}}" aria-expanded="true"
+                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Teams</span>
             </a>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                <div class="bg-white py-2 collapse-inner rounded">
-                    <h6 class="collapse-header">Custom Components:</h6>
-                    <a class="collapse-item" href="buttons.html">Buttons</a>
-                    <a class="collapse-item" href="cards.html">Cards</a>
-                </div>
-            </div>
         </li>
 
-
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="{{route('players.index')}}" aria-expanded="true"
+                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Players</span>
             </a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="true" aria-controls="collapseTwo">
+            <a class="nav-link collapsed" href="{{route('matches.index')}}" aria-expanded="true"
+                aria-controls="collapseTwo">
                 <i class="fas fa-fw fa-cog"></i>
                 <span>Matches</span>
             </a>
         </li>
-
     </ul>
     <!-- End of Sidebar -->
